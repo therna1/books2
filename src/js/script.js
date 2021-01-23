@@ -29,10 +29,15 @@ function initActions() {
   for (let image of images) {
     image.addEventListener('dblclick', function (event) {
       event.preventDefault();
-      image.classList.add('favorite');
-
       let bookId = image.getAttribute('data-id');
-      favoriteBooks.push(bookId);
+
+      if(favoriteBooks.includes(bookId)){
+        image.classList.remove('favorite');
+        favoriteBooks.splice(bookId);
+      } else {
+        image.classList.add('favorite');
+        favoriteBooks.push(bookId);
+      };    
     });
   }
 }
