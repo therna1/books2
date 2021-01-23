@@ -1,4 +1,5 @@
 
+
 const templates = {
   templateBook: Handlebars.compile(document.querySelector('#template-book').innerHTML)
 };
@@ -35,4 +36,3 @@ function initActions() {
     });
   }
 }
-
