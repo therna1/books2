@@ -20,7 +20,6 @@ render();
 initActions();
 
 
-
 let favoriteBooks = [];
 
 function initActions() {
